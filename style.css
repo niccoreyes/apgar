@@ -1,3 +1,18 @@
-h1, p {
-  font-family: Lato;
+/* add those lines at the top of your css file: */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+p {
+  font-family: Roboto;
 }
