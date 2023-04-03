@@ -48,22 +48,7 @@ function Scaffold() {
     </Box>
   );
 }
-interface formList {
-  name: string;
-  label: string;
-}
 function ButtonOne() {
-  const initialList: formList[] = [
-    { name: 'keyboard', label: './images/image001.png' },
-    {
-      name: 'headphones',
-      label: './images/image002.png',
-    },
-    {
-      name: 'mouse',
-      label: './images/image003.png',
-    },
-  ];
   return (
     <FormControl>
       <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
@@ -73,12 +58,12 @@ function ButtonOne() {
         name="radio-buttons-group"
         row={true}
       >
-        {initialList.map((item) => {
+        {['keyboard', 'headphones', 'mouse'].map((item) => {
           return (
             <FormControlLabel
-              value={item.name}
+              value={item}
               control={<Radio />}
-              label={item.name.toUpperCase()}
+              label={item.toUpperCase()}
             />
           );
         })}
